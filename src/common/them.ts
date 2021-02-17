@@ -1,16 +1,29 @@
 import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
 const color = {
-  blue: '#0000ff',
+  green: '#6D9B12',
+  grey:'#E5E5E5',
+  blue:"#4285F4"
 };
 const defaultTheme = createMuiTheme();
+console.log(defaultTheme);
+
 const theme = createMuiTheme({
+    typography:{
+        button:{
+            width:270,
+            height:50,
+            fontStyle:'italic'
+        }
+    },
   overrides: {
-    MuiSelect: {
+    MuiButton: {
       root: {
-        paddingRight: defaultTheme.spacing(3),
+        paddingRight: defaultTheme.spacing(13),
+        marginRight: defaultTheme.spacing(3),
+        fontSize:defaultTheme.spacing(3),
       },
-      icon: {
+      colorInherit: {
         color: color.blue,
       },
     },
