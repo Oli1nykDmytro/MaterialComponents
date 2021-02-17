@@ -5,18 +5,18 @@ import StoryBook from './component/StoryBook';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import theme from './common/them';
+import theme from './common/theme';
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-        <Switch>
-          <Route path="/story-book" exact>
-            <StoryBook />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/story-book" exact>
+              <StoryBook />
+            </Route>
+          </Switch>
         </CssBaseline>
       </ThemeProvider>
     </>
