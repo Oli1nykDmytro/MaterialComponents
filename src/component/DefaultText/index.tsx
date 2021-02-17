@@ -23,8 +23,8 @@ const TypographyComponents: FC<PropTypography> =(props)=>{
                 <Typography variant="h4"> {text} </Typography>  
                 <Typography variant="h5"> {text} </Typography>  
                 <Typography variant="h6"> {text} </Typography>  
-                <Typography variant="h6"> {text} </Typography>  
-                <Typography variant="h6"> {text} </Typography>  
+                <Typography variant="body1"> {text} </Typography>  
+                <Typography variant="body2"> {text} </Typography>  
             </Box>
         </>
     );

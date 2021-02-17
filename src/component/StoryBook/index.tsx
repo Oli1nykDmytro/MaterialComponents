@@ -6,8 +6,6 @@ import InputComponent from '../Input'
 
 
 const StoryBook = () => {
-
-    const sizeText:string[] = ["h1","h2","h3","h4","h5","h6"]
   return (
     <>
       <Box pt={1} pl={1} display="flex" flexDirection="column">
