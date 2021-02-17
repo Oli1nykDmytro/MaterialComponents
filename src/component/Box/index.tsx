@@ -1,3 +1,3 @@
-import {  Box } from "@material-ui/core";
+import { Box } from '@material-ui/core';
 
 export default Box;

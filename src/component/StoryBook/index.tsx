@@ -1,17 +1,15 @@
 import React from 'react';
 
-import Box from '../Box'
+import Box from '../Box';
 
-
-const StoryBook = () =>{
-return (
+const StoryBook = () => {
+  return (
     <>
-        <Box pt={1} pl={1} display='flex' flexDirection='column'>
-            Hello
-        </Box>
+      <Box pt={1} pl={1} display="flex" flexDirection="column">
+        Hello
+      </Box>
     </>
-)
+  );
 };
-
 
 export default StoryBook;
