@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, Theme } from "@material-ui/core/styles";
 
 
 const color ={
@@ -7,6 +7,4 @@ const color ={
 
 const defaultTheme = createMuiTheme();
 
-
-
-console.log(defaultTheme);
+export default defaultTheme;
