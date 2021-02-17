@@ -1,12 +1,20 @@
 import React from 'react';
-import './App.css';
+import { Switch, Route} from 'react-router-dom'
+import StoryBook from './component/StoryBook'
+// import './App.css';
+
+import './common/them'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+  <>
+  <Switch>
+    <Route path="/story-book" exact>
+        <StoryBook/>
+      </Route>
+    </Switch>
+  </>
+
   );
 }
 
