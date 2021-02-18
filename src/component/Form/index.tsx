@@ -6,6 +6,7 @@ import TextField from '../common/material-ui/TextField';
 import Button from '../common/material-ui/Button';
 import Box from '../common/material-ui/Box';
 import Checkbox from '../common/material-ui/Checkbox';
+
 interface ValuesInput {
   fullName: string;
   email: string;
@@ -16,8 +17,6 @@ const FormComponent: React.FC<{}> = () => {
   const initialValues: ValuesInput = { fullName: '', email: '', password: '' };
   const [checked, setChecked] = React.useState(true);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.checked);
-
     setChecked(event.target.checked);
   };
 
@@ -31,21 +30,25 @@ const FormComponent: React.FC<{}> = () => {
         }}
       >
         <Form>
-          <label htmlFor="firstName">First Name</label>
-          {/* <Field id="firstName" name="firstName" placeholder="First Name" /> */}
           <Box width={75} p={1} display="flex" flexDirection="column">
+            <label htmlFor="firstName">First Name</label>
             <TextField />
+            <label htmlFor="firstName">Email</label>
             <TextField />
+            <label htmlFor="firstName">Password</label>
             <TextField />
           </Box>
 
+          <Box display="flex" >
           <Checkbox
             checked={checked}
             onChange={handleChange}
             inputProps={{ 'aria-label': 'primary checkbox' }}
           />
+          <p>Creating an account means you’re okay with our <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and our default <a href="#">Notification Settings</a>.</p>
+          </Box>
 
-          <Button>Sing Up</Button>
+          <Button color="secondary">Sing Up</Button>
         </Form>
       </Formik>
     </div>
