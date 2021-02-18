@@ -20,6 +20,17 @@ const FormComponent: React.FC<{}> = () => {
     setChecked(event.target.checked);
   };
 
+
+  const style = {
+    background: 'green',
+    color: 'white',
+    width:270,
+    height: 50,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  };
+
+
   return (
     <div>
       <Formik
@@ -34,17 +45,24 @@ const FormComponent: React.FC<{}> = () => {
           password: yup.string().min(8).required(),
         })}
       >
-        <Form>
-          <Box width={75} p={1} display="flex" flexDirection="column">
-            <label htmlFor="firstName">First Name</label>
-            <TextField />
+        <Form >
+          
+          <Box width={550} mb={2} p={1} display="flex" flexDirection="column">
+            <Box mb={2}>
+            <label >First Name</label>
+            <TextField style = {{width: 550,height:50}} variant="filled" fullWidth={true}/>
+            </Box>
+            <Box mb={2}>
             <label htmlFor="firstName">Email</label>
-            <TextField type="email" />
+            <TextField style = {{width: 550,height:50}} variant="filled" type="email" />
+            </Box>
+            <Box mb={2}>
             <label htmlFor="firstName">Password</label>
-            <TextField type="password" />
+            <TextField style = {{width: 550, height:50}} variant="filled" type="password" />
+            </Box>
           </Box>
 
-          <Box display="flex">
+          <Box display="flex" width={570}>
             <Checkbox
               checked={checked}
               onChange={handleChange}
@@ -57,7 +75,7 @@ const FormComponent: React.FC<{}> = () => {
             </p>
           </Box>
 
-          <Button type="submit" color="secondary">
+          <Button style={style}  type="submit" color="default">
             Sing Up
           </Button>
         </Form>

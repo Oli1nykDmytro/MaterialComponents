@@ -1,13 +1,14 @@
 import React from 'react';
+import Box from '../../common/material-ui/Box';
 import Button from '../../common/material-ui/Button';
-import ButtonGroup from '../../common/material-ui/ButtonGroup';
+
 
 const BoxBotton: React.FC<{}> = () => {
   return (
-    <ButtonGroup color="primary">
+    <Box pl={1} color="primary" width={550} display="flex" justifyContent="space-between">
       <Button>Sign up with Google</Button>
       <Button>Sign up with Microsoft</Button>
-    </ButtonGroup>
+    </Box>
   );
 };
 
