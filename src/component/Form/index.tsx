@@ -11,7 +11,18 @@ interface ValuesInput {
   fullName: string;
   email: string;
   password: string;
-}
+};
+
+
+const style = {
+  background: 'green',
+  color: 'white',
+  width:270,
+  height: 50,
+  padding: '0 30px',
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+};
+
 
 const FormComponent: React.FC<{}> = () => {
   const initialValues: ValuesInput = { fullName: '', email: '', password: '' };
@@ -19,25 +30,16 @@ const FormComponent: React.FC<{}> = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
-
-
-  const style = {
-    background: 'green',
-    color: 'white',
-    width:270,
-    height: 50,
-    padding: '0 30px',
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-  };
-
-
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) =>{
+    console.log(event);
+    
+  }
   return (
     <div>
       <Formik
         initialValues={initialValues}
         onSubmit={(values, actions) => {
-          console.log({ values, actions });
-          actions.setSubmitting(false);
+          console.log({ values });
         }}
         validationSchema={yup.object({
           fullName: yup.string().required(),
@@ -45,7 +47,7 @@ const FormComponent: React.FC<{}> = () => {
           password: yup.string().min(8).required(),
         })}
       >
-        <Form >
+        <Form onSubmit={handleSubmit} >
           
           <Box width={550} mb={2} p={1} display="flex" flexDirection="column">
             <Box mb={2}>
@@ -75,7 +77,7 @@ const FormComponent: React.FC<{}> = () => {
             </p>
           </Box>
 
-          <Button style={style}  type="submit" color="default">
+          <Button style={style} type="submit" color="default">
             Sing Up
           </Button>
         </Form>

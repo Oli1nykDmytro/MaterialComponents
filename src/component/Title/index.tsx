@@ -1,13 +1,15 @@
 import React from 'react';
-import Box from '../../common/material-ui/Box'
-
+import Box from '../../common/material-ui/Box';
+import Typography from '../../common/material-ui/Typography';
 
 const Title: React.FC<{}> = () => {
-    return (
-        <Box width={440} p={1} >
-          <h1>Sign up to set your brand up for success</h1>
-        </Box>
-    );
-  };
-  
-  export default Title;
+  return (
+    <Box width={480} p={1} mb={4}>
+      <Typography variant="h4">
+        Sign up to set your brand up for success
+      </Typography>
+    </Box>
+  );
+};
+
+export default Title;

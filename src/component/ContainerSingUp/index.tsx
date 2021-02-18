@@ -2,15 +2,15 @@ import React from 'react';
 import Box from '../../common/material-ui/Box';
 import FormComponent from '../Form/index';
 import BoxButtons from '../GoupButton/index';
-import Lines from '../Lines'
-import Title from '../Title'
+import Lines from '../Lines';
+import Title from '../Title';
 const SingUpComponent: React.FC<{}> = () => {
   return (
     <>
-      <Box ml={6} >
-        <Title/>
+      <Box ml={6}>
+        <Title />
         <BoxButtons />
-        <Lines/>
+        <Lines />
         <FormComponent />
       </Box>
     </>
