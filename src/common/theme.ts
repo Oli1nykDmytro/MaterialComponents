@@ -19,7 +19,6 @@ const theme = createMuiTheme({
       main: color.red,
     },
   },
-
   overrides: {
     MuiButton: {
       root: {
