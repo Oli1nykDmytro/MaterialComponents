@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../common/material-ui/Button';
-import ButtonGroup from '../common/material-ui/ButtonGroup';
+import Button from '../../common/material-ui/Button';
+import ButtonGroup from '../../common/material-ui/ButtonGroup';
 
 const BoxBotton: React.FC<{}> = () => {
   return (

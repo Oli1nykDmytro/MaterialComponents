@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Formik, Form, Field } from 'formik';
 
 import * as yup from 'yup';
-import TextField from '../common/material-ui/TextField';
-import Button from '../common/material-ui/Button';
-import Box from '../common/material-ui/Box';
-import Checkbox from '../common/material-ui/Checkbox';
+import TextField from '../../common/material-ui/TextField';
+import Button from '../../common/material-ui/Button';
+import Box from '../../common/material-ui/Box';
+import Checkbox from '../../common/material-ui/Checkbox';
 
 interface ValuesInput {
   fullName: string;
