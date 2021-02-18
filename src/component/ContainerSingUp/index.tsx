@@ -7,14 +7,14 @@ const SingUpComponent: React.FC<{}> = () => {
   return (
     //title
     <>
-    <Box>
       <Box>
-        <h1>Sign up to set your brand up for success</h1>
+        <Box>
+          <h1>Sign up to set your brand up for success</h1>
+        </Box>
+        <BoxButtons />
+        {/* //---or */}
+        <FormComponent />
       </Box>
-      <BoxButtons />
-      {/* //---or */}
-      <FormComponent />
-    </Box>
     </>
   );
 };
