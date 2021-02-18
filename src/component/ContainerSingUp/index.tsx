@@ -6,7 +6,6 @@ import Lines from '../Lines'
 import Title from '../Title'
 const SingUpComponent: React.FC<{}> = () => {
   return (
-    //title
     <>
       <Box ml={6} >
         <Title/>
